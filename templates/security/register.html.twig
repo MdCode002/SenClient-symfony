@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register
+{% endblock %}
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+	 <header class="head">
+        <nav>
+            <h1 id="logo">Senclient</h1>
+        </nav>
+    </header>
+
+	<h3>Creer un compte administratreur</h3>
+	<div class="container">
+
+		{{ form_errors(registrationForm) }}
+
+		<div id="loginForm">
+			{{ form_start(registrationForm) }}
+			{{ form_row(registrationForm.email, {label: false,'attr': {'id': 'email','placeholder':'Votre Email'}}) }}
+			{{ form_row(registrationForm.nom, {label:false, 'attr': {'id': 'name','placeholder':'Votre nom complet'}}) }}
+			{{ form_row(registrationForm.plainPassword, {label: false, 'attr': {'id': 'mdp','placeholder':'Votre Mot de passe'}}) }}
+
+			<center><input type="submit" value="s'inscrire"></center>
+			{{ form_end(registrationForm) }}
+
+		</div>
+
+		<p id="loglink">vous avez un compte  ?<a href="{{path('security.login') }}">Se connecter</a>
+		</p>
+	</div>
+
+{% endblock %}
+
+
+{# <input type="nomcomplet" id="name" name="nomcomplet" required placeholder="votre nom complet">
+
+<input type="email" id="email" name="email" required placeholder="votre Email">
+
+<input type="password" id="mdp" name="mdp" required placeholder=" votre Mot de passe"> #}

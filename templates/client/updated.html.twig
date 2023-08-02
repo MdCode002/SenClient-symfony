@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+{% include "partials/header.html.twig" %}
+
+<h5>Modifier Clients</h5>
+<div class="container">
+	
+
+	<div id="loginForm">
+		{{ form_start(form) }}
+		{{ form_errors(form) }}
+		{{ form_row(form.nom, {label:false, 'attr': {'id': 'name','placeholder':'Nom complet'}}) }}
+		{{ form_row(form.email, {label: false,'attr': {'id': 'email','placeholder':'Email'}}) }}
+		{{ form_row(form.Tel, {label: false,'attr': {'id': 'email','placeholder':'Telephone'}}) }}
+		{{ form_row(form.adresse, {label: false,'attr': {'id': 'email','placeholder':'Adresse'}}) }}
+		{{ form_row(form.sexe, {label: false,'attr': {'id': 'email','placeholder':'Sexe'}}) }}
+		<div id="checkbox-div">Statut{{ form_widget(form.statut, {label: false,'attr':
+			{'id':'checkbox','placeholder':'Statut'}}) }}</div>
+		<br>
+		<center>{{ form_row(form.Submit) }}</center>
+
+		{# <center><input type="submit" value="s'inscrire"></center> #}
+		{{ form_end(form) }}
+	</div>
+</div>
+
+{# {{form(form)}} #}
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/style2.css') }}">
+{% endblock %}
+
+{% block body %}
+{% include "partials/header.html.twig" %}
+
+<div class="gerer">
+	<a href="{{path('new.client') }}">
+		<button>Ajouter client</button>
+	</a>
+</div>
+<div class="button2">
+	<a href="{{path('exporter.client') }}"> <button>exporter</button> </a>
+</div>
+<center>
+	<h2>
+		Liste clients</h2>
+</center>
+
+
+</br>
+<div class="searchEtfitre">
+	{{ form_start(form) }}
+
+	<div class="search">
+		{{ form_row(form.searchTerm) }}
+		{{ form_row(form.recherche,{label:false}) }}
+		{{ form_row(form.Rechercher) }}</div>
+	<br>
+
+	{{ form_end(form) }}
+
+	{{ form_start(filtre) }}
+	<div class="search">
+		{{ form_row(filtre.searchTerm) }}
+		{{ form_row(filtre.Filtrer) }}
+	</div>
+	<br>
+	{{ form_end(filtre) }}
+</div>
+<main class="table">
+	<section class="table_header">
+		<table>
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>adresse</th>
+					<th>telephone</th>
+					<th>email</th>
+					<th>statut</th>
+				</tr>
+			</thead>
+	</section>
+	<section class="table_body">
+		<tbody>
+			{% for client in clients %}
+			<tr>
+				{% set imagePath = client.sexe is same as('M') ? 'img/homme.png' : 'img/femme.png' %}
+				{% set statut = client.statut == 1 ? 'green' : 'red' %}
+				<td><img src="{{ asset(imagePath) }}" alt="">{{client.nom}}</td>
+				<td>{{client.adresse}}</td>
+				<td>{{client.tel}}</td>
+				<td>{{client.email}}</td>
+				<td>
+					<center>
+						<div id="{{statut}}"></div>
+					</center>
+				</td>
+				<td>
+					<a href="{{path('Updated.client',{id :client.id} ) }}">
+						Modifier</a>
+				</td>
+				<td>
+					<a href="{{path('delete.client',{id :client.id} ) }}">
+						Suprimer</a>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		</table>
+	</section>
+
+</main>
+</br>
+<center>
+	{{ knp_pagination_render(clients) }}</center></br>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+	integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{asset('script/Exporter.js')}}"></script>
+{% endblock %}

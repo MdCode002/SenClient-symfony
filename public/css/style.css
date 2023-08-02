@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+.head {
+    background-color: #6865DF;
+    height: 60px;
+}
+
+#logo {
+    flex: 2 1 40rem;
+    margin: 10px;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    ;
+}
+
+nav {
+    min-height: 10vh;
+    display: flex;
+    margin: auto;
+}
+
+nav ul {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    padding-top: 15px;
+}
+
+.container {
+    width: 400px;
+    display: flex;
+    margin-top: -12px;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+h2,
+h3 {
+    margin-top: 75px;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #6865DF;
+    text-align: center;
+}
+
+label,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #6865DF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #7f7dee;
+}
+
+form input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #AEB0DB;
+    margin-bottom: 20px;
+    outline: none;
+    width: 300px;
+    height: 25px;
+
+}
+
+select {
+    padding: 0;
+    width: 323px;
+}
+
+form p {
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+a {
+    color: #6865DF;
+    text-decoration: none;
+}
+
+form input[type="email"],
+input[type="password"],
+p {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.client {
+    background-color: whitesmoke;
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 63%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+
+}
+
+.gerer {
+    display: flex;
+    margin: auto;
+    justify-content: right;
+    font-size: 20px;
+    margin-top: -30px;
+    margin-right: 75px;
+
+}
+
+button {
+    background-color: #6865DF;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    padding-left: 10px 10px;
+
+
+}
+
+button:hover {
+    background-color: #7f7dee;
+}
+
+h5 {
+    margin-top: 25px;
+    padding: 20px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #6865DF;
+    text-align: center;
+}
+
+
+#loglink {
+    position: absolute;
+    top: 300px;
+
+}
+
+/* Styles pour la div contenant le checkbox */
+#checkbox-div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.buttonH {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#btn {
+    background-color: rgb(247, 38, 38);
+}
+
+/* Styles pour la pagination */

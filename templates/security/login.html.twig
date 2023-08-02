@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+{% endblock %}
+{% block body %}
+	 <header class="head">
+        <nav>
+            <h1 id="logo">Senclient</h1>
+        </nav>
+    </header>
+	<hr>
+	<h2>Connexion</h2>
+	<div class="container">
+
+		<form action="{{path('security.login')}}" method="post" id="loginForm">
+			{% for message in app.flashes( 'success' ) %}
+				<div class="alert-success">
+					{{message}}
+				</div>
+			{% endfor %}
+			{% if error %}
+				<div class="alert alert-danger">
+					{{ error.messageKey|trans(error.messageData, 'security') }}
+				</div>
+			{% endif %}
+
+
+			<input type="email" id="mail" aria-describedby="emailHelp" name="_username" placeholder="exemple@symrecipr.fr" value="{{ LastUsername }}">
+
+			<input type="password" id="mdp" placeholder="Password" autocomplete="off" name="_password" aria-placeholder="Mot de passe">
+			<center><input type="submit" value="se connecter"></center>
+			<p>vous n'avez pas de compte ?
+				<a href="{{path('security.register') }}">S'inscrire</a>
+			</p>
+
+		</form>
+	</div>
+
+{% endblock %}
