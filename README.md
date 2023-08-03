@@ -9,7 +9,7 @@ This is a web application developed to efficiently manage a list of clients. The
 ## Authors
  - Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
  - Mouhamad Alassane Mbaye : [@Mouhamad-A-Mbaye](https://github.com/Mouhamad-A-Mbaye)
- - Ibrahima Mbaye 
+ - Ibrahima Mbaye : [@Halil667](https://github.com/Halil667)
 ## Features
 
 - Client Information: Each client entry consists of essential details including name, address, phone number, email address, gender, and     status (active or inactive).
