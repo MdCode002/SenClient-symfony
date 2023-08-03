@@ -20,5 +20,5 @@ This is a web application developed to efficiently manage a list of clients. The
 
   - Sorting: Clients can be sorted by there status.
 
-   - Printing and Exporting: Users have the option to print a list of clients and export it in both PDF formats.
+   - Printing and Exporting: Users have the option to print a list of clients and export it in  PDF formats.
    
