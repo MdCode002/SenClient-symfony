@@ -7,7 +7,7 @@
 This is a web application developed to efficiently manage a list of clients. The application provides comprehensive features for creating, editing, and deleting client records. It also offers filtering, sorting, and exporting capabilities. The application is designed to streamline client management tasks and enhance productivity.
 
 ## Authors
- - Mouhamed Diouf : [@Medzo02](https://github.com/Medzo02)
+ - Mouhamed Diouf : [@MdCode002](https://github.com/MdCode002)
  - Mouhamad Alassane Mbaye : [@Mouhamad-A-Mbaye](https://github.com/Mouhamad-A-Mbaye)
  - Ibrahima Mbaye : [@Halil667](https://github.com/Halil667)
 ## Features
